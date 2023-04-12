@@ -1,11 +1,11 @@
 import cart from './assets/cart.svg';
 import styles from './assets/cart.module.css';
 
-const CartWidget = () => {
+const CartWidget = ({cantcart}) => {
     return (
         <div>
             <img className={styles.imagen} src={cart} alt="cart"/>
-            0
+             <h3 style={{ display: "inline-block",  margin: "15px" }}>=> {cantcart}</h3>
         </div>
     )
 }

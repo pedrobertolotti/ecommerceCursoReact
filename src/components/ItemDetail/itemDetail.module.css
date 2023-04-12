@@ -1,0 +1,18 @@
+.articles{
+    display: inline-block;
+    border: 3px solid black ;
+    padding: 20px;
+    background-color: rgb(158, 230, 158);
+    margin: 10px;
+    border-radius: 10%;
+}
+
+.imageprops{
+        max-height: 400px;
+        width: auto;
+}
+
+.par {
+    font-size: 25px; 
+  }
+  

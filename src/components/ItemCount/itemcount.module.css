@@ -1,0 +1,14 @@
+.buttons{
+   
+    border-radius: 20%;
+    background-color: rgb(156, 156, 224);
+}
+
+.inline{
+    display: inline;
+    margin: 30px ;
+}
+
+.margintop{
+    margin-top: 30px ;
+}
