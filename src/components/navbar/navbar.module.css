@@ -7,3 +7,12 @@
     font-style: oblique;
     color: rgb(21, 44, 27);
 }
+
+#botonS{
+    background-color: #28a745;
+    color: #fff;
+    border: 1px solid #28a745;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+}

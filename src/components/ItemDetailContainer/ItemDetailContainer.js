@@ -2,20 +2,23 @@ import { useState, useEffect } from "react";
 import { getProductById } from "../asyncMock";
 import styles from  '../ItemDetail/itemDetail.module.css';
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
 
     const [product, setProduct]= useState(null);
 
+    const {itemId} = useParams()
+
     useEffect(()=> {
-        getProductById('1')
+        getProductById(itemId)
             .then(response =>{
                 setProduct(response)
             })
             .catch(error=> {
                 console.error(error)
             })
-            }, [])  // uso vacios cuando solo lo quiero ejecutar una vey al cargar el componente por primera vey
+            }, [itemId])  // uso vacios cuando solo lo quiero ejecutar una vey al cargar el componente por primera vey
 
   return (
     <div className={styles.itemdetailpop}>

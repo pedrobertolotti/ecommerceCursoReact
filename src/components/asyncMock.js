@@ -27,6 +27,8 @@ const products= [
 ]
 
 export const getProducts = () => {
+    console.log(1)
+
     return new Promise((resolve)=>{
         setTimeout(()=>{resolve(products)} , 500 )
     })
@@ -40,3 +42,10 @@ export const getProductById= (productId) => {
 }
 
 //getProducts().then(products -> console.log(products)).catch(error -> console.log(error))
+
+export const getProductsbyCategory= (productCategory) => {
+    console.log(2)
+    return new Promise((resolve)=>{ //uso el metodo de arrazs find para encontrar el que tiene el mismo id, nombre del arreglo.find( item=> item.propiedadigual a algo )
+       setTimeout(()=>{ resolve(products.filter(prod => prod.category === productCategory))}, 500 ) // un igual es asignar
+    })
+}

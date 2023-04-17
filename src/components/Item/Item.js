@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../Item/item.module.css'
+import { Link } from 'react-router-dom'
 
 export const Item = ({id, category, name, img, price, stock}) => {
   return (
@@ -16,12 +17,12 @@ export const Item = ({id, category, name, img, price, stock}) => {
                 Precio: ${price}
             </p>
             <p>
-                Stock disponible: {stock}
+                Stock disponible: {stock} 
             </p>
             
         </section>
         <footer>
-            <button className='btn btn-success' > Ver Detalles</button>
+            <Link to={`/item/${id}`} className='option'> Ver Detalle </Link>
         </footer>
     </article>
   )
